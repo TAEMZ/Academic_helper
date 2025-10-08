@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Deep Learning: Methods and Applications",
+    "authors": "Li Deng, Dong Yu",
+    "publication_year": 2014,
+    "abstract": "This book provides an overview of general deep learning methodology and its applications to a variety of signal and information processing tasks. The application areas include natural language and text processing, information retrieval, and multimodal information processing.",
+    "full_text": "Deep learning has emerged as a new area of machine learning research. It aims to move machine learning closer to one of its original goals: artificial intelligence. Deep learning is about learning multiple levels of representation and abstraction that help to make sense of data such as images, sound, and text. The hierarchy of concepts allows the computer to learn complicated concepts by building them out of simpler ones.",
+    "source_type": "paper"
+  },
+  {
+    "title": "Climate Change and Global Warming: Causes, Effects and Solutions",
+    "authors": "Sarah Thompson, Michael Roberts",
+    "publication_year": 2021,
+    "abstract": "This comprehensive study examines the causes of climate change, its observed and projected effects on ecosystems and human societies, and potential mitigation strategies. The paper synthesizes recent research on greenhouse gas emissions, temperature trends, and policy interventions.",
+    "full_text": "Climate change represents one of the most significant challenges facing humanity in the 21st century. The scientific consensus indicates that human activities, particularly the burning of fossil fuels and deforestation, have led to increased atmospheric concentrations of greenhouse gases. These changes have resulted in observable warming trends, altered precipitation patterns, and increased frequency of extreme weather events.",
+    "source_type": "paper"
+  },
+  {
+    "title": "Cognitive Psychology: Theory and Practice",
+    "authors": "Elizabeth Anderson, James Wilson",
+    "publication_year": 2019,
+    "abstract": "An exploration of cognitive processes including perception, attention, memory, language, and problem-solving. This textbook integrates classic theories with contemporary research findings and real-world applications.",
+    "full_text": "Cognitive psychology is the scientific study of mental processes such as attention, language use, memory, perception, problem solving, creativity, and reasoning. It examines how people acquire, process, and store information. The field has evolved significantly with contributions from neuroscience, computer science, and philosophy.",
+    "source_type": "textbook"
+  },
+  {
+    "title": "Machine Learning: A Probabilistic Perspective",
+    "authors": "Kevin Murphy",
+    "publication_year": 2012,
+    "abstract": "This textbook offers a comprehensive introduction to machine learning from a unified, probabilistic perspective. It covers supervised learning, unsupervised learning, and reinforcement learning with detailed mathematical foundations.",
+    "full_text": "Machine learning is the study of algorithms that learn from data. The field has seen tremendous growth in recent years, with applications ranging from web search to medical diagnosis. This book takes a probabilistic approach to machine learning, emphasizing the role of probability theory in understanding and designing learning algorithms.",
+    "source_type": "textbook"
+  },
+  {
+    "title": "The Economics of Innovation and Technical Change",
+    "authors": "Richard Nelson, Sidney Winter",
+    "publication_year": 2018,
+    "abstract": "This paper examines the economic drivers and consequences of technological innovation, including the role of research and development, intellectual property rights, and market structures in fostering innovation.",
+    "full_text": "Innovation is a key driver of economic growth and productivity. This study analyzes how firms invest in research and development, how new technologies diffuse through the economy, and how policy interventions can promote innovation. We find that both market incentives and institutional factors play crucial roles in shaping innovative activity.",
+    "source_type": "paper"
+  },
+  {
+    "title": "Artificial Intelligence: A Modern Approach",
+    "authors": "Stuart Russell, Peter Norvig",
+    "publication_year": 2020,
+    "abstract": "The leading textbook in artificial intelligence, covering intelligent agents, problem-solving, knowledge representation, planning, learning, and robotics. Includes both theoretical foundations and practical applications.",
+    "full_text": "Artificial intelligence is concerned with building systems that can perform tasks that normally require human intelligence. These include visual perception, speech recognition, decision-making, and language translation. The field combines insights from computer science, mathematics, psychology, linguistics, and philosophy.",
+    "source_type": "textbook"
+  },
+  {
+    "title": "Environmental Science: Sustainability and Human Impact",
+    "authors": "David Miller, Jennifer Lee",
+    "publication_year": 2020,
+    "abstract": "An interdisciplinary examination of environmental issues including biodiversity loss, pollution, resource depletion, and sustainable development. The text emphasizes evidence-based solutions and policy approaches.",
+    "full_text": "Environmental science integrates physical, biological, and social sciences to study the environment and solve environmental problems. Key topics include ecosystem dynamics, human population growth, energy resources, air and water quality, and sustainable practices. Understanding these interconnected systems is essential for addressing global environmental challenges.",
+    "source_type": "course_material"
+  },
+  {
+    "title": "Neural Networks and Deep Learning",
+    "authors": "Michael Nielsen",
+    "publication_year": 2015,
+    "abstract": "An accessible introduction to neural networks and deep learning, covering fundamental concepts like backpropagation, convolutional networks, and recurrent architectures with practical examples and code.",
+    "full_text": "Neural networks are computing systems inspired by biological neural networks. They consist of interconnected nodes that process information using a connectionist approach. Deep learning uses multiple layers of neural networks to progressively extract higher-level features from raw input. Applications include image recognition, natural language processing, and game playing.",
+    "source_type": "paper"
+  },
+  {
+    "title": "Social Psychology: Understanding Human Behavior",
+    "authors": "Robert Brown, Maria Garcia",
+    "publication_year": 2018,
+    "abstract": "This text explores how individuals think about, influence, and relate to one another. Topics include social cognition, attitudes, group dynamics, prejudice, and prosocial behavior.",
+    "full_text": "Social psychology examines how people's thoughts, feelings, and behaviors are influenced by the actual, imagined, or implied presence of others. The field investigates phenomena such as conformity, obedience, persuasion, group decision-making, and interpersonal attraction. Research methods include laboratory experiments, field studies, and surveys.",
+    "source_type": "textbook"
+  },
+  {
+    "title": "Quantum Computing: Principles and Applications",
+    "authors": "David Johnson, Lisa Chen",
+    "publication_year": 2022,
+    "abstract": "An overview of quantum computing fundamentals, including qubits, quantum gates, quantum algorithms, and potential applications in cryptography, optimization, and simulation.",
+    "full_text": "Quantum computing leverages quantum mechanical phenomena such as superposition and entanglement to process information. Unlike classical computers that use bits, quantum computers use quantum bits or qubits. This enables them to solve certain problems exponentially faster than classical computers. Key applications include factoring large numbers, searching databases, and simulating quantum systems.",
+    "source_type": "paper"
+  }
+]

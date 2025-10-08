@@ -1,0 +1,33 @@
+
+    Machine Learning in Modern Computing
+
+    Introduction:
+    Machine learning has revolutionized the field of computer science and artificial intelligence.
+    This assignment explores the fundamental concepts of machine learning, including supervised
+    learning, unsupervised learning, and reinforcement learning.
+
+    Supervised Learning:
+    Supervised learning algorithms learn from labeled training data. Common algorithms include
+    linear regression, logistic regression, decision trees, and neural networks. These methods
+    are widely used in applications such as image recognition, spam detection, and predictive
+    analytics.
+
+    Deep Learning:
+    Deep learning, a subset of machine learning, uses artificial neural networks with multiple
+    layers. Convolutional Neural Networks (CNNs) excel at image processing, while Recurrent
+    Neural Networks (RNNs) are effective for sequential data like text and speech.
+
+    Applications:
+    Machine learning is applied across various domains including healthcare (disease diagnosis),
+    finance (fraud detection), autonomous vehicles, natural language processing, and
+    recommendation systems.
+
+    Conclusion:
+    As computing power increases and datasets grow larger, machine learning continues to advance,
+    enabling more sophisticated AI applications that impact society in profound ways.
+
+    References:
+    - Deep Learning by Goodfellow, Bengio, and Courville
+    - Pattern Recognition and Machine Learning by Bishop
+    - Machine Learning: A Probabilistic Perspective by Murphy
+    

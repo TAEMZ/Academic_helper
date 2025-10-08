@@ -14,6 +14,7 @@ A comprehensive RAG-powered system that analyzes student assignments, provides r
 4. 🧪 **[test_api.py](test_api.py)** - Automated testing
 
 **Just want to test it?**
+
 ```bash
 # 1. Add your Gemini API key to .env
 # 2. Run these commands:
@@ -29,6 +30,7 @@ python test_api.py
 ## 🏗️ Architecture
 
 The system consists of:
+
 - **FastAPI Backend**: REST API with JWT authentication
 - **PostgreSQL with pgvector**: Database with vector similarity search
 - **n8n**: Workflow automation for assignment processing
@@ -77,6 +79,7 @@ docker-compose up -d
 ```
 
 This will start:
+
 - PostgreSQL with pgvector (port 5432)
 - Redis (port 6379)
 - n8n (port 5678)
@@ -102,17 +105,20 @@ This populates the database with sample academic papers for RAG testing.
 ## 📚 API Documentation
 
 ### Base URL
+
 ```
 http://localhost:8000
 ```
 
 ### Interactive API Docs
+
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
 
 ### Authentication Endpoints
 
 #### Register New Student
+
 ```http
 POST /auth/register
 Content-Type: application/json
@@ -126,6 +132,7 @@ Content-Type: application/json
 ```
 
 Response:
+
 ```json
 {
   "id": 1,
@@ -137,6 +144,7 @@ Response:
 ```
 
 #### Login
+
 ```http
 POST /auth/login
 Content-Type: application/json
@@ -148,6 +156,7 @@ Content-Type: application/json
 ```
 
 Response:
+
 ```json
 {
   "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
@@ -158,6 +167,7 @@ Response:
 ### Protected Endpoints (Require JWT Token)
 
 #### Upload Assignment
+
 ```http
 POST /upload
 Authorization: Bearer <your_jwt_token>
@@ -167,6 +177,7 @@ file: <assignment.pdf|.docx|.txt>
 ```
 
 Response:
+
 ```json
 {
   "assignment_id": 1,
@@ -176,12 +187,14 @@ Response:
 ```
 
 #### Get Analysis Results
+
 ```http
 GET /analysis/{assignment_id}
 Authorization: Bearer <your_jwt_token>
 ```
 
 Response:
+
 ```json
 {
   "id": 1,
@@ -203,6 +216,7 @@ Response:
 ```
 
 #### Search Academic Sources
+
 ```http
 POST /sources
 Authorization: Bearer <your_jwt_token>
@@ -215,6 +229,7 @@ Content-Type: application/json
 ```
 
 Response:
+
 ```json
 [
   {
@@ -232,11 +247,13 @@ Response:
 ## 🔄 n8n Workflow
 
 ### Access n8n Dashboard
+
 ```
 http://localhost:5678
 ```
 
 Credentials:
+
 - Username: `admin`
 - Password: `admin123`
 
@@ -264,6 +281,7 @@ Credentials:
 ## 🗄️ Database Schema
 
 ### Students Table
+
 ```sql
 CREATE TABLE students (
     id SERIAL PRIMARY KEY,
@@ -276,6 +294,7 @@ CREATE TABLE students (
 ```
 
 ### Assignments Table
+
 ```sql
 CREATE TABLE assignments (
     id SERIAL PRIMARY KEY,
@@ -290,6 +309,7 @@ CREATE TABLE assignments (
 ```
 
 ### Analysis Results Table
+
 ```sql
 CREATE TABLE analysis_results (
     id SERIAL PRIMARY KEY,
@@ -305,6 +325,7 @@ CREATE TABLE analysis_results (
 ```
 
 ### Academic Sources Table (RAG)
+
 ```sql
 CREATE TABLE academic_sources (
     id SERIAL PRIMARY KEY,
@@ -324,6 +345,7 @@ CREATE TABLE academic_sources (
 ### 1. Test with cURL
 
 #### Register
+
 ```bash
 curl -X POST http://localhost:8000/auth/register \
   -H "Content-Type: application/json" \
@@ -336,6 +358,7 @@ curl -X POST http://localhost:8000/auth/register \
 ```
 
 #### Login
+
 ```bash
 curl -X POST http://localhost:8000/auth/login \
   -H "Content-Type: application/json" \
@@ -348,6 +371,7 @@ curl -X POST http://localhost:8000/auth/login \
 Save the `access_token` from the response.
 
 #### Upload Assignment
+
 ```bash
 curl -X POST http://localhost:8000/upload \
   -H "Authorization: Bearer <your_token>" \
@@ -355,6 +379,7 @@ curl -X POST http://localhost:8000/upload \
 ```
 
 #### Get Analysis
+
 ```bash
 curl -X GET http://localhost:8000/analysis/1 \
   -H "Authorization: Bearer <your_token>"
@@ -399,10 +424,12 @@ print(response.json())
 Access the database GUI at http://localhost:5050
 
 Credentials:
+
 - Email: `admin@admin.com`
 - Password: `admin123`
 
 Add Server:
+
 - Host: `postgres`
 - Port: `5432`
 - Database: `academic_helper`
@@ -412,6 +439,7 @@ Add Server:
 ## 🛠️ Development
 
 ### View Logs
+
 ```bash
 # All services
 docker-compose logs -f
@@ -423,21 +451,25 @@ docker-compose logs -f postgres
 ```
 
 ### Restart Services
+
 ```bash
 docker-compose restart backend
 ```
 
 ### Rebuild Backend
+
 ```bash
 docker-compose up -d --build backend
 ```
 
 ### Access Backend Shell
+
 ```bash
 docker-compose exec backend bash
 ```
 
 ### Run Database Migrations
+
 ```bash
 docker-compose exec postgres psql -U student -d academic_helper -f /docker-entrypoint-initdb.d/init.sql
 ```
@@ -469,29 +501,6 @@ academic-assignment-helper/
 └── README.md
 ```
 
-## 🔧 Troubleshooting
-
-### Services won't start
-```bash
-docker-compose down -v
-docker-compose up -d
-```
-
-### Backend can't connect to database
-Wait 30 seconds for PostgreSQL to fully initialize, then:
-```bash
-docker-compose restart backend
-```
-
-### n8n webhook not working
-1. Ensure n8n workflow is activated
-2. Check webhook URL matches `.env` configuration
-3. Verify PostgreSQL credentials in n8n
-
-### Embedding generation fails
-- Verify `GEMINI_API_KEY` is set correctly in `.env`
-- Check Gemini API quota at https://makersuite.google.com/
-
 ## 📦 Technology Stack
 
 - **Backend**: FastAPI, SQLAlchemy, psycopg2
@@ -512,24 +521,3 @@ docker-compose restart backend
 ✅ Comprehensive analysis with confidence scoring
 ✅ Citation format recommendations
 ✅ RESTful API with OpenAPI documentation
-
-## 📧 Submission
-
-Submit your implementation to: **yordanos.dev1@gmail.com**
-
-Include:
-1. GitHub repository link
-2. 5-minute demo video
-3. Technical documentation
-
-## 📄 License
-
-MIT License - Educational purposes only
-
-## 👥 Support
-
-For issues or questions, please open an issue on GitHub or contact the maintainer.
-
----
-
-**Built with ❤️ for Academic Excellence**
